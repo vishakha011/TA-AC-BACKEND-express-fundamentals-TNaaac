@@ -1,14 +1,15 @@
 {
-  "name": "altcampus-assignment",
+  "name": "block-BNaabk",
   "version": "1.0.0",
   "description": "",
-  "main": "",
+  "main": "index.js",
   "scripts": {
-    "test": "jest --passWithNoTests"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "AltCampus",
-  "license": "GNU GPL V3",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "jest": "^26.0.1"
+    "express": "^4.17.1"
   }
 }
