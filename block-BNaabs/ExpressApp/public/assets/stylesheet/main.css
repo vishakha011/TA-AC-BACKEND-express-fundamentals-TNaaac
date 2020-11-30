@@ -1,0 +1,270 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 2. v2.0 | 20110126
+  License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+/*
+=============================================================
+Grid
+=============================================================
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+=============================================================
+Custom styles
+=============================================================
+*/
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    background-color: #1D2029;
+}
+
+.insta {
+    color: #C13584 !important;
+}
+
+.youtube {
+    color: red !important;
+}
+
+.red-text {
+    color: rgb(206, 63, 63) !important;
+}
+
+.border-wrap1 {
+    border-top: 5px solid #DC5096 !important;
+}
+
+.border-wrap2 {
+    border-top: 5px solid #C0052B !important;
+}
+/*
+=============================================================
+Header
+=============================================================
+*/
+
+header {
+    background-color: #20222F;
+    text-transform: capitalize;
+    padding-bottom: 160px;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1.5;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.text {
+    font-size: 15px;
+    font-weight: 600;
+    color: #747A9B;
+}
+
+.switch {
+    width: 50px;
+    height: 24px;
+    display: inline-block;
+    border-radius: 34px;
+    margin-left: 20px;
+    background: linear-gradient(to right, #272B41, #3BCF91);
+    position: relative;
+
+}
+
+.slider::before{
+    display: inline-block;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: #20222F;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 6px;
+}
+
+/*
+=============================================================
+Social-Media Section 
+=============================================================
+*/
+.social-media-container{
+    position: absolute;
+    width: 100%;
+    top: 127px;
+}
+
+.social-media {
+    flex: 0 1 23%;
+    text-align: center;
+    background-color: #252B43;
+    padding: 25px;
+    border-radius: 5px;
+    border-top: 5px solid #158EF7;
+}
+
+.icon-user {
+    margin-bottom: 22px;
+    display: flex;
+    justify-content: center;
+}
+
+.fab {
+    font-size: 24px;
+    color: #158EF7;
+}
+
+.username {
+    margin-left: 10px;
+    color: #747A9B;
+    align-self: center;
+}
+
+h2 {
+    color: white;
+    font-size: 55px;
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+.primary-text {
+    color: #747A9B;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.update {
+    font-size: 14px;
+    font-weight: 600;
+    color: #3BCE97;
+    padding-top: 30px;
+}
+
+
+/*
+=============================================================
+Overview section
+=============================================================
+*/
+.flex-row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding-bottom: 50px;
+}
+
+.overview {
+    padding-top: 140px;
+}
+
+.heading {
+    font-size: 25px;
+}
+
+.col-1-4 {
+    /* width: 23%; */
+    flex: 0 1 23%;
+    padding: 20px;
+    background-color: hsl(228,29%,20%);
+    text-align: center;
+    border-radius: 5px;
+    margin: 30px 20px 0 0;
+}
+
+.flex-overview {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: space-around;
+
+}
+
+.social-box {
+    flex: 1 1 40%;
+    height: 93px;
+    text-align: left;
+    padding: 20px;
+}
+
+h3 {
+    font-size: 35px;
+    color: white;
+    font-weight: 700;
+    padding-top: 30px;
+}
+.account {
+    align-items: center;
+}
