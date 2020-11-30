@@ -4,19 +4,19 @@ var app = express();
 
 // Middleware
 app.use('/admin', (req, res, next) => {
-    next('Unautorized user')
-})
+    next('Unautorized user');
+});
 
 
 // Routing middleware
 
 app.get('/', (req, res) => {
     res.send('Welcome')
-})
+});
 
 app.get('/about', (req, res) => {
     res.send('About Page')
-})
+});
 
 // error
 app.use((req, res, next) => {
@@ -24,7 +24,7 @@ app.use((req, res, next) => {
 });
 
 app.use((err, req, res, next) => {
-    res.send(err)
+    res.status(500).send(err);
 });
 
 
