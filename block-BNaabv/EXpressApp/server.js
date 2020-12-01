@@ -5,13 +5,10 @@ var cookieParser = require('cookie-parser');
 var app = express();
 
 // Middlewares
-app.use("/admin", (req, res, next) => {
-    next('Unauthorized user')
-})
 
-app.use(logger('tiny'))
+app.use(logger('dev'))
+
 app.use(express.urlencoded({extended: false}));
-
 app.use(express.json());
 
 app.use(cookieParser());
@@ -19,6 +16,10 @@ app.use(cookieParser());
 app.use((req, res, next) => {
     res.cookie('count', 1)
     next();
+});
+
+app.use("/admin", (req, res, next) => {
+    next('Unauthorized user')
 })
 
 // Routing Middleware
@@ -28,7 +29,7 @@ app.get('/', (req, res) => {
     res.send('<h2>Welcome to Express</h2>')
 });
 
-app.get('/', (req, res) => {
+app.get('/about', (req, res) => {
     res.set('Content-Type', 'text/plain');
     res.send('My name is qwerty')
 });
@@ -36,7 +37,7 @@ app.get('/', (req, res) => {
 app.post('/form', (req, res) => {
     if(req.headers['content-type'] === 'application/x-www-form-urlencoded') {
         console.log(req.headers['content-type'])
-        res.send(req.body);
+        res.json(req.body);
     }
 });
 
